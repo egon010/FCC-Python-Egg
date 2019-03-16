@@ -78,8 +78,8 @@ class BaseAPIRequest:
   def request(self, *ordered_args, **args):
     self.format_url(*ordered_args, **args)
     #print self.formatted_url
-    t = urllib.urlopen(self.formatted_url).read().strip()
-    if t.startswith("callback("):
+    t = urllib.request.urlopen(self.formatted_url).read().strip()
+    if t.startswith(b"callback("):
       t=t[t.index("(")+1:-1]
 
     print(self.formatted_url)

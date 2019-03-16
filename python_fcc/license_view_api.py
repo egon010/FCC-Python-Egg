@@ -1,4 +1,4 @@
-from generic_api import *
+from .generic_api import *
 
 # Simple Python wrapper around the License View API provided by the FCC.
 
